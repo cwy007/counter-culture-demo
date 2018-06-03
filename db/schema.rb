@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180603055011) do
+ActiveRecord::Schema.define(version: 20180603055633) do
 
   create_table "logs", force: :cascade do |t|
     t.string "description"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180603055011) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "logs_count", default: 0, null: false
   end
 
 end
