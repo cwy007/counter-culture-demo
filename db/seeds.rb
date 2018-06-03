@@ -1,7 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# 初始化 qrcode 数据
+10.times do |i|
+  Qrcode.create(name: "qrcode name #{i}")
+end
+puts "create 10 qrcode records."
+
+# 初始化 log 数据
+Qrcode.each do |code|
+  5.times do |i|
+    code.logs.create(
+      description: ["scan", "scan_subscribe"].sample
+    )
+  end
+end
