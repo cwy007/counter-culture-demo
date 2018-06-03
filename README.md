@@ -13,7 +13,8 @@
 用第三方库 counter_culture 统一进行各类缓存实作
 2. 第二条需求，需要根据关联记录的内容，进行有条件地缓存。可以利用第三方
 库：gem 'counter_culture' 来解决，这个库提供了更具条件进行缓存的功能
-
 ![](https://ws4.sinaimg.cn/large/006tKfTcly1frxzqp6guwj30pw06uwf5.jpg)
+3. 也可以通过动态列名称来实现
+![](https://ws2.sinaimg.cn/large/006tKfTcly1fry2b8fs67j30q0092q4a.jpg)
 
 https://github.com/magnusvk/counter_culture#manually-populating-counter-cache-values
